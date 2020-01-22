@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  dashboard-sericvice:
+    build: ./web
+    volumes:
+      - ./web:/app
+      - /app/node_modules
+    ports:
+        - 4201:3001
+    depends_on:
+      - dashboard-db-service
+  dashboard-db-service:
+    image: postgres:9.6
+    restart: always
+    ports:
+      - "5435:5432"
+    volumes:
+      - ./static/db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: NnKpf6AXp6MALn
+      POSTGRES_USER: dashboard
+      POSTGRES_DB: dashboard
+      PGDATA: /tmp

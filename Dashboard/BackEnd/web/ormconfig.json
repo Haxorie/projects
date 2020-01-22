@@ -1,0 +1,25 @@
+{
+  "type": "postgres",
+  "host": "web-db-service",
+  "port": 5432,
+  "username": "segmentation",
+  "password": "NnKpf6AXp6MALn",
+  "database": "segmentation",
+  "synchronize": true,
+  "logging": true,
+  "entityPrefix": "sg_",
+  "migrationsTableName": "sg_migrations",
+  "entities": [
+    "entity/**/*.ts"
+  ],
+  "migrations": [
+    "migrations/*.ts"
+  ],
+  "cli": {
+    "entitiesDir": "entities",
+    "migrationsDir": "migrations"
+  },
+  "subscribers": [
+    "subscriber/*.ts"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "config_id": "development",
+    "app_name": "Dashboard",
+    "app_desc": "Dashboard System",
+    "node_port": 3001,
+    "secret": "46Em@n4c3Z<>m^N*^NGK?(F`$$#≤h&e^h",
+    "json_indentation": 4
+  },
+  "stage": {
+    "config_id": "staging",
+    "secret": "P7V3>/ZW&9aNDzmMtw*Q~tw!sbH@`E&v",
+    "node_port": 8080
+  },
+  "prod": {
+    "config_id": "production",
+    "secret": "%XGS>J-fjmbtBjuCw;a=4$+^h~TY2^b3`",
+    "node_port": 8080
+  }
+}
